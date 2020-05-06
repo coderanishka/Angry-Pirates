@@ -94,10 +94,8 @@ function draw(){
  fill(200,50,150);
  ellipseMode(RADIUS);
  ellipse(ball.position.x,ball.position.y,40,40);
+}
 
- if(keyCode===32){
-    ball.position.y = mouseY;
-    ball.position.x = mouseX;
-    }
-
+function mouseDragged(){
+  Matter.Body.setPosition(ball, {x: mouseX , y: mouseY});
 }
